@@ -6,7 +6,8 @@
     .wrap { max-width: 1240px; margin: 0 auto; padding: 0 5%; }
     .dark { background: #2D312F; color: #FFFFFF; }
     .dark a { color: #FFFFFF; }
-    .hero { margin-top: -28px; padding: 96px 0 72px; }
+    .dark .btn-light { color: #2D2E2B; }
+    .hero { margin-top: -28px; padding-top: 96px; padding-bottom: 72px; }
     .hero h1 { font-size: clamp(40px, 6vw, 68px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.0; margin: 0 0 28px; max-width: 12ch; }
     .hero p.lead { font-size: 17px; line-height: 1.55; max-width: 52ch; margin: 0 0 36px; }
     .btn { display: inline-block; border-radius: 0; padding: 14px 26px; font-size: 15px; font-weight: 500; text-decoration: none; border: 0; cursor: pointer; }
@@ -39,8 +40,18 @@
     .signoff { background: #FFFFFF; padding: 0 0 8px; margin-bottom: -48px; overflow: hidden; }
     .signoff .giant { font-size: clamp(64px, 13vw, 190px); font-weight: 500; letter-spacing: -0.03em; line-height: 0.95; color: #71726D; white-space: nowrap; }
     @media (max-width: 760px) {
+        .wrap { padding: 0 20px; }
         .grid2, .sources, .plans { grid-template-columns: 1fr; }
-        .hero { padding: 64px 0 56px; }
+        .grid2 { gap: 40px; padding: 40px 0 48px; }
+        .hero { padding-top: 56px; padding-bottom: 48px; }
+        .hero h1 { margin-bottom: 20px; }
+        .hero p.lead { margin-bottom: 28px; }
+        .prod .head { flex-direction: column; align-items: flex-start; gap: 4px; }
+        .prod .tag { text-align: left; }
+        .prod .foot { flex-wrap: wrap; gap: 12px; }
+        .center-note { padding-bottom: 56px; }
+        .band { padding: 48px 0 40px; }
+        .pricing { padding-bottom: 56px; }
     }
 </style>
 

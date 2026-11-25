@@ -36,6 +36,15 @@
     .digest input[type=email], .digest select { font: inherit; font-size: 14px; border: 1px solid #d1d5db; border-radius: 0; padding: 8px 10px; background: #fff; }
     .empty { font-size: 15px; color: var(--muted); padding: 24px 0; }
     .pager { margin-top: 20px; font-size: 14px; }
+    @media (max-width: 640px) {
+        .filters { flex-direction: column; align-items: stretch; }
+        .filters input[type=text], .filters select { width: 100%; max-width: none; }
+        .filters .check { padding-bottom: 0; }
+        .job { flex-direction: column; gap: 2px; }
+        .digest form { flex-direction: column; align-items: stretch; }
+        .digest input[type=email], .digest select { width: 100%; max-width: none; }
+        .paywall { padding: 20px; }
+    }
 </style>
 
 <div class="board-head">
