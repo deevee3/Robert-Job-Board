@@ -16,6 +16,8 @@
     .prod-line { font-size: 17px; line-height: 1.5; margin: 0 0 32px; max-width: 52ch; }
     .prod-copy { font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 58ch; }
     .board-panel { background: #FFFFFF; color: #2D2E2B; max-width: 880px; }
+    .board-panel a { color: #2D2E2B; }
+    .bp-main { min-width: 0; }
     .board-panel ::selection { background: #2D2E2B; color: #FFFFFF; }
     .bp-row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 18px 22px; border-bottom: 1px solid #E4E4E0; text-decoration: none; color: #2D2E2B; }
     .bp-row:last-of-type { border-bottom: 0; }
