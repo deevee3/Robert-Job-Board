@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\DashboardController;
@@ -18,6 +19,7 @@ Route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
 
 // Digest signup.
 Route::post('/digest', [DigestController::class, 'store'])->name('digest.store');
+Route::get('/digest/unsubscribe/{token}', [DigestController::class, 'unsubscribe'])->name('digest.unsubscribe');
 
 // WorkOS AuthKit sign-in flow.
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->middleware('guest');
@@ -28,6 +30,11 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middl
 // Signed-in area. All routes here require a WorkOS-authenticated session.
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // Digest signup backend (admin allowlist enforced in the controller).
+    Route::get('/admin/subscribers', [SubscriberController::class, 'index'])->name('admin.subscribers');
+    Route::post('/admin/subscribers/{subscriber}/unsubscribe', [SubscriberController::class, 'unsubscribe'])->name('admin.subscribers.unsubscribe');
+    Route::delete('/admin/subscribers/{subscriber}', [SubscriberController::class, 'destroy'])->name('admin.subscribers.destroy');
 
     Route::get('/settings', [SettingsController::class, 'show'])->name('settings');
     Route::put('/settings', [SettingsController::class, 'update'])->name('settings.update');
