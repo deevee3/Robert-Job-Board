@@ -68,7 +68,7 @@ class JobPosting extends Model
             return 'age unknown';
         }
 
-        $hours = $at->diffInHours(now());
+        $hours = (int) $at->diffInHours(now());
         if ($hours < 1) {
             return 'under 1h old';
         }
