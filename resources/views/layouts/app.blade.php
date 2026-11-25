@@ -6,8 +6,10 @@
     <title>{{ config('theme.name') }} @hasSection('title') — @yield('title') @endif</title>
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png"></title>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <style>
+        @font-face { font-family: 'Liberation Sans'; src: url('/fonts/LiberationSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Liberation Sans'; src: url('/fonts/LiberationSans-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
         :root {
             --primary: {{ config('theme.colors.primary') }};
             --accent: {{ config('theme.colors.accent') }};
@@ -26,8 +28,10 @@
         .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-family: var(--font-display); font-weight: 700; font-size: 18px; margin-right: auto; }
         .brand img { height: 24px; width: auto; }
         nav { display: flex; align-items: center; gap: 14px; font-size: 14px; }
-        nav a { text-decoration: none; color: var(--text); }
+        nav a { text-decoration: none; color: var(--text); padding: 12px 4px; }
         nav a:hover { color: var(--primary); }
+        nav a:focus-visible, .brand:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+        ::selection { background: var(--text); color: var(--surface); }
         main { max-width: 880px; margin: 0 auto; padding: 28px 20px 48px; }
         footer { max-width: 880px; margin: 0 auto; padding: 0 20px 28px; color: var(--muted); font-size: 13px; }
         .card { background: var(--surface); border: 1px solid #e5e7eb; border-radius: 10px; padding: 18px 20px; margin-bottom: 18px; }

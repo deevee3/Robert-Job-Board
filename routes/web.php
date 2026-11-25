@@ -7,11 +7,16 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DigestController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\SettingsController;
+use App\Models\JobPosting;
 use Illuminate\Support\Facades\Route;
 
-// Public landing page.
+// Public landing page. The hero visual is the real board: the five
+// freshest postings, straight from the same store /jobs reads.
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'previewJobs' => JobPosting::newestFirst()->limit(5)->get(),
+        'totalJobs' => JobPosting::count(),
+    ]);
 })->name('home');
 
 // Public job board (free tier capped at 3 results, enforced server-side).
