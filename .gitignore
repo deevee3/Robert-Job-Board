@@ -18,3 +18,4 @@ yarn-error.log
 /storage/framework/views/*.php
 /storage/logs/*.log
 database/*.sqlite
+jobs.db
