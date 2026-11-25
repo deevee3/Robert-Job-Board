@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('theme.name') }} @hasSection('title') — @yield('title') @endif</title>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"></title>
     <style>
         :root {
             --primary: {{ config('theme.colors.primary') }};
@@ -21,7 +24,7 @@
         header { border-bottom: 1px solid #e5e7eb; background: var(--surface); }
         .header-inner { max-width: 880px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
         .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-family: var(--font-display); font-weight: 700; font-size: 18px; margin-right: auto; }
-        .brand img { height: 32px; width: 32px; }
+        .brand img { height: 24px; width: auto; }
         nav { display: flex; align-items: center; gap: 14px; font-size: 14px; }
         nav a { text-decoration: none; color: var(--text); }
         nav a:hover { color: var(--primary); }
@@ -49,8 +52,7 @@
 <header>
     <div class="header-inner">
         <a class="brand" href="{{ route('home') }}">
-            <img src="{{ config('theme.logo') }}" alt="{{ config('theme.name') }} logo">
-            {{ config('theme.name') }}
+            <img src="{{ config('theme.logo') }}" alt="{{ config('theme.name') }}">
         </a>
         <nav>
             <a href="{{ route('jobs.index') }}">Jobs</a>
