@@ -88,7 +88,7 @@
             <div class="board-panel">
                 @forelse ($previewJobs as $job)
                     <a class="bp-row" href="{{ route('jobs.index') }}">
-                        <span>
+                        <span class="bp-main">
                             <span class="bp-title">{{ $job->title ?: 'Untitled role' }}</span>
                             <span class="bp-meta" style="display:block;">{{ $job->company ?: 'Company not listed' }}@if ($job->location) · {{ $job->location }}@endif · via {{ $job->source_label }}</span>
                         </span>
@@ -120,7 +120,7 @@
         </section>
 
         <div class="center-note">
-            <p>Less noise, more signal. Robert checks the sources every weekday morning, so what you see is hours old. The early application is the one that gets read.</p>
+            <p>Less noise, more signal. Apply checks the sources every weekday morning, so what you see is hours old. The early application is the one that gets read.</p>
         </div>
     </div>
 </div>

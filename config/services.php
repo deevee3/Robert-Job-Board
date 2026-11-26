@@ -41,7 +41,7 @@ return [
         'webhook_secret' => env('STRIPE_WEBHOOK_SECRET'),
         'price_monthly' => env('STRIPE_PRICE_MONTHLY'),
         'price_yearly' => env('STRIPE_PRICE_YEARLY'),
-        // Robert plans: Basic $7/month, Unlimited $47/month.
+        // Apply plans: Basic $7/month, Unlimited $47/month.
         'price_basic' => env('STRIPE_PRICE_BASIC'),
         'price_unlimited' => env('STRIPE_PRICE_UNLIMITED'),
     ],

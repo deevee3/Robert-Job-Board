@@ -20,7 +20,7 @@
     @endforeach
 
     <p style="font-size: 13px; color: #71726D; margin-top: 28px;">
-        Robert by Glenride ·
+        Apply, a project of Glenride ·
         <a href="{{ route('digest.unsubscribe', $subscriber->unsubscribe_token) }}" style="color: #71726D;">Unsubscribe</a>
     </p>
 </div>

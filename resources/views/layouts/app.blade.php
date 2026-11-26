@@ -94,7 +94,7 @@
 </main>
 
 <footer>
-    {{ config('theme.name') }} by Glenride.
+    {{ config('theme.name') }}, a project of Glenride.
 </footer>
 </body>
 </html>

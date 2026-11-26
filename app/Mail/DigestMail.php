@@ -22,7 +22,7 @@ class DigestMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Robert digest — '.$this->jobs->count().' fresh startup jobs',
+            subject: 'Apply — '.$this->jobs->count().' fresh startup jobs',
         );
     }
 

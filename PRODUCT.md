@@ -1,6 +1,6 @@
-# Robert — Product
+# Apply — Product
 
-- **What:** A startup job board that ranks postings by freshness. Public product of D'Vaughn's personal job scraper. Live at https://jobs.dvaughnhouse.com.
+- **What:** Apply, a project of Glenride — a startup job board that ranks postings by freshness. Public product of D'Vaughn's personal job scraper. Live at https://apply.glenride.com.
 - **Audience:** Job seekers who want to apply in a posting's first 24 hours, before the pile grows.
 - **Promise:** Every posting shows how old it is and where it came from; apply links go straight to the real application page.
 - **Sources:** a16z board, YC board, HN Who's Hiring, Cosign, Lenny's Jobs, newsletters (Next Play, a16z Build, Founders You Should Know), 141 company careers pages. Refreshed every weekday morning.

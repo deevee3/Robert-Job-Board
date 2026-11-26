@@ -11,7 +11,7 @@ class ImportJobs extends Command
 {
     protected $signature = 'jobs:import {--path= : Path to the scraper jobs.db (defaults to JOB_SCRAPER_DB_PATH)}';
 
-    protected $description = 'Import job postings from the scraper store into Robert, pruning anything older than 30 days';
+    protected $description = 'Import job postings from the scraper store into Apply, pruning anything older than 30 days';
 
     public function handle(): int
     {
@@ -58,7 +58,7 @@ class ImportJobs extends Command
             ->delete();
 
         $total = JobPosting::count();
-        $this->info("Imported {$imported} postings, pruned {$pruned} older than 30 days. Robert now holds {$total}.");
+        $this->info("Imported {$imported} postings, pruned {$pruned} older than 30 days. Apply now holds {$total}.");
 
         return self::SUCCESS;
     }

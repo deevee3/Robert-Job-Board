@@ -27,7 +27,7 @@ class BillingController extends Controller
 
     /**
      * Start a subscription through Stripe Checkout.
-     * Robert plans: Basic ($7/month) and Unlimited ($47/month).
+     * Apply plans: Basic ($7/month) and Unlimited ($47/month).
      */
     public function subscribe(Request $request): RedirectResponse
     {
